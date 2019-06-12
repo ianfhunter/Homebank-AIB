@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import os.path
 import time
 from datetime import date
@@ -26,7 +26,9 @@ for line in array:
     translated_line = ""
     cols = line.split(",")
     print(cols)
-    dt = datetime.strptime(cols[1], '%d/%m/%y')
+    dat = cols[1].strip("\"")
+    print("date:", dat)
+    dt = datetime.strptime(dat, '%d/%m/%Y')
     translated_line += dt.strftime("%d/%m/%Y")     # Date
     translated_line += ";;;;"
     translated_line += cols[2]
