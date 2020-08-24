@@ -34,8 +34,8 @@ for line in array:
     translated_line += cols[2]
     translated_line += ";"
     pattern = re.compile(r'\s+')
-    cols[3] = re.sub(pattern, '', cols[3])	# Expend
-    cols[4] = re.sub(pattern, '', cols[4])	# Income
+    cols[3] = re.sub(pattern, '', cols[5])	# Expend
+    cols[4] = re.sub(pattern, '', cols[6])	# Income
 
     if(cols[3]): # Expenditure
         translated_line += "-" + cols[3]
